@@ -25,7 +25,7 @@ Users can subscribe to monthly packages. The system is split into a client, cent
 
 ## Architecture
 Client (Java SE)
-| REST
+│ REST
 
 Central Server
 │ JMS
@@ -35,6 +35,8 @@ Central Server
 
 --------------------------------------------------------------------------------------------------
 -- **Client** – console application that sends REST requests
+
 -- **Central Server** – receives REST requests and routes them to the correct subsystem via JMS
+
 -- **Subsystems** – communicate only through JMS, share one MySQL database
   
