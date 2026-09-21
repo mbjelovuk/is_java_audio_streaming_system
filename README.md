@@ -25,16 +25,16 @@ Users can subscribe to monthly packages. The system is split into a client, cent
 
 ## Architecture
 Client (Java SE)
-│ REST
+| REST
 
 Central Server
 │ JMS
-├──► Subsystem 1  (Users + Places)
-├──► Subsystem 2  (Audio + Categories)
-└──► Subsystem 3  (Packages, Subscriptions, Listening, Ratings, Favorites)
+- Subsystem 1  (Users + Places)
+- Subsystem 2  (Audio + Categories)
+- Subsystem 3  (Packages, Subscriptions, Listening, Ratings, Favorites)
 
-
-- **Client** – console application that sends REST requests
-- **Central Server** – receives REST requests and routes them to the correct subsystem via JMS
-- **Subsystems** – communicate only through JMS, share one MySQL database
+--------------------------------------------------------------------------------------------------
+-- **Client** – console application that sends REST requests
+-- **Central Server** – receives REST requests and routes them to the correct subsystem via JMS
+-- **Subsystems** – communicate only through JMS, share one MySQL database
   
